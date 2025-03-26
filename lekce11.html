@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekce 11</title>
+</head>
+
+<body>
+    <button onclick="alert('Kys')">Klikni mě</button>
+    <button id="tlacitko">počet stisknutí: 0</button>¨
+    <div>
+        <input id="prvni">
+        <select id="operator">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="krat">*</option>
+            <option value="deleno">/</option>
+        </select>
+        <input id="druhy">
+
+        <button id="odeslat">Spočítej!</button>
+    </div>
+
+    <script>
+        let pocet = 0
+        let tlacitko = document.getElementById("tlacitko")
+        tlacitko.addEventListener("click", function () {
+            pocet++
+            tlacitko.innerText = "Počet stisknutí: " + pocet
+        })
+        let prvniCislo = document.getElementById("prvni")
+        let druhyCislo = document.getElementById("druhy")
+        let operator = document.getElementById("operator")
+        let spocitejTlacitko = document.getElementById("spocitej")
+        spocitejTlacitko.addEventListener("click", function () {
+            if (operator = "plus") {
+                vysledek.innerText = prvniCislo.value + druhyCislo.value
+            }
+        })
+    </script>
+</body>
+
+</html>
